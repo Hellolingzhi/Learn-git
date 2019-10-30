@@ -6,11 +6,27 @@ git学习
 	返回根目录------$ cd /
 	查看当前路径----$ pwd
 	
+	添加文件到Git仓库，分两步：
+	使用命令git add <file>，注意，可反复多次使用，添加多个文件； git add 后的文件为暂存状态
+	使用命令git commit -m <message>，完成。		提交过得文件，保存在自己本地的仓库
+	例如：
+	$ git add file1.txt
+	$ git add file2.txt file3.txt
+	$ git commit -m "add 3 files."
+	
 2、
 	在git bash 中创建文件夹------$ mkdir 文件夹名
-	将当前目录变成一个仓库------ $ git init 当前目录下会多了一个.git的目录 ，会有一个master分支
+	将当前目录变成一个仓库 仓库初始化------ $ git init 当前目录下会多了一个.git的目录 ，会有一个master分支
 	查看当前目录下的子目录--------$ ls -ah  
 	删除本地仓库--------就是删除仓库文件夹下隐藏的 .git 目录  步骤：$ ls -ah  显示子目录  然后  $ rm -rf .git  可以看到master分支已经删除 ,该文件已经不再作为仓库
+	
+	
+3、
+	git中 vi 操作
+	$ vi fileName // 进入编辑文件
+	vi 操作 分命令模式+输入模式，按ESC切换模式。
+    :i 输入内容   :q 退出 :q!强制退出 :wq保存并退出 :数值—定位到某一行 /查找斜杠后面的内容
+	:wq // 退出编辑状态, 回到命令窗口
 	
 	
 注：
