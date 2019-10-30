@@ -1,3 +1,4 @@
 Git a version control system.
 Git is free software.
-sha zi gui o 
+you dian nan
+tou teng 
