@@ -26,9 +26,17 @@ git学习
 	$ git diff 文件名  -------顾名思义就是查看difference作了什么修改 （好像只能看到未add的文件的修改？？？）
 	commit之后用$ git status 会显示nothing to commit, working tree clean当前没有需要提交的修改，而且，工作目录是干净
 	
+	$ git log----可以查看提交历史版本,便确定要回退到哪个版本
+	$ git log --pretty=oneline  ----查看提交历史版本简化显示
+	$ git reflog ------查看命令历史，以便确定要回到未来的哪个版本。
+	HEAD指向的版本就是当前版本，因此，Git允许我们在版本的历史之间穿梭，使用命令git reset --hard commit_id。
+	$ git reset --hard commit_id（版本号）  可以到指定的版本
+	$ git reset --hard HEAD^   返回git log 中显示的上一个版本
+	
 3、
 	git中 vi 操作
 	$ vi fileName // 进入编辑文件
+	$ cat fileName  //可以查看文本内容
 	vi 操作 分命令模式+输入模式，按ESC切换模式。
     :i 输入内容   :q 退出 :q!强制退出 :wq保存并退出 :数值—定位到某一行 /查找斜杠后面的内容
 	:wq // 退出编辑状态, 回到命令窗口
