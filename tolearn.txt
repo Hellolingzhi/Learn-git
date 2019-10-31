@@ -11,6 +11,10 @@ git学习
 2、
 	理解工作区和暂存区
 	工作区有一个隐藏目录.git，这个不算工作区，而是Git的版本库。Git的版本库里存了很多东西，其中最重要的就是称为stage（或者叫index）的暂存区，还有Git为我们自动创建的第一个分支master，以及指向master的一个指针叫HEAD。
+	
+	Git跟踪并管理的是修改，而非文件：每次修改之后，如果不用git add到暂存区，那就不会加入到commit中。
+	例如：第一次修改 -> git add -> 第二次修改 -> git commit 第一次的修改被提交了，第二次的修改不会被提交。
+	提交后，用git diff HEAD -- readme.txt命令可以查看工作区和版本库里面最新版本文本的区别，通过git status也可以知道没有暂存add.
 
 	在git bash 中创建文件夹------$ mkdir 文件夹名
 	将当前目录变成一个仓库 仓库初始化------ $ git init 当前目录下会多了一个.git的目录 ，会有一个master分支
@@ -27,6 +31,7 @@ git学习
 	
 	$ git status命令可以让我们时刻掌握仓库当前的状态，红色是未add过的，绿色是add过没有提交的
 	$ git diff 文件名  -------顾名思义就是查看difference作了什么修改 （好像只能看到未add的文件的修改？？？）
+	$ git diff HEAD -- 文件名   ------查看工作区和版本库里面最新版本文本的区别
 	commit之后用$ git status 会显示nothing to commit, working tree clean当前没有需要提交的修改，而且，工作目录是干净
 	
 	$ git log----可以查看提交历史版本,便确定要回退到哪个版本
