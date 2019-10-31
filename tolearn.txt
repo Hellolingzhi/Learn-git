@@ -9,14 +9,17 @@ git学习
 	
 	
 2、
+	理解工作区和暂存区
+	工作区有一个隐藏目录.git，这个不算工作区，而是Git的版本库。Git的版本库里存了很多东西，其中最重要的就是称为stage（或者叫index）的暂存区，还有Git为我们自动创建的第一个分支master，以及指向master的一个指针叫HEAD。
+
 	在git bash 中创建文件夹------$ mkdir 文件夹名
 	将当前目录变成一个仓库 仓库初始化------ $ git init 当前目录下会多了一个.git的目录 ，会有一个master分支
 	查看当前目录下的子目录--------$ ls -ah  
 	删除本地仓库--------就是删除仓库文件夹下隐藏的 .git 目录  步骤：$ ls -ah  显示子目录  然后  $ rm -rf .git  可以看到master分支已经删除 ,该文件已经不再作为仓库
 	
 	添加文件到Git仓库，分两步：
-	使用命令git add <file>，注意，可反复多次使用，添加多个文件； git add 后的文件为暂存状态
-	使用命令git commit -m <message>，完成。		提交过得文件，保存在自己本地的仓库
+	使用命令git add <file>，注意，可反复多次使用，添加多个文件； git add 后的文件为暂存状态实际上就是把文件修改添加到暂存区
+	使用命令git commit -m <message>，完成。		提交过得文件，保存在自己本地的仓库  实际上就是把暂存区的所有内容提交到当前分支。因为我们创建Git版本库时，Git自动为我们创建了唯一一个master分支，所以，现在，git commit就是往master分支上提交更改
 	例如：
 	$ git add file1.txt
 	$ git add file2.txt file3.txt
