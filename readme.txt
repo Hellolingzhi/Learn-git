@@ -1,4 +1,4 @@
 Git a version control system.
 Git is free software.
-you dian nan
-tou teng 
+you dian nan GPL
+tou teng GPL 
